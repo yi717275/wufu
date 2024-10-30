@@ -1,0 +1,62 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #F5F7FA;
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 shadow-smooth hover:shadow-hover;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-500 text-white hover:bg-accent-600 shadow-smooth hover:shadow-hover;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-smooth hover:shadow-hover transition-all duration-300;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 rounded-xl border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition duration-200;
+  }
+  
+  .heading-1 {
+    @apply text-4xl font-bold text-gray-900 mb-6;
+  }
+  
+  .heading-2 {
+    @apply text-3xl font-bold text-gray-800 mb-4;
+  }
+  
+  .heading-3 {
+    @apply text-2xl font-semibold text-gray-800 mb-3;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-slideIn {
+  animation: slideInFromLeft 0.5s ease-in-out;
+}
